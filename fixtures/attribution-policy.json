@@ -1,0 +1,17 @@
+{
+  "requiredOwnerFields": [
+    "team",
+    "feature",
+    "userId",
+    "workspaceId"
+  ],
+  "featureSoftBudgetsUsd": {
+    "support-triage": 1.5,
+    "code-review": 1.8,
+    "invoice-assistant": 1.2
+  },
+  "routeConcentrationWarnPercent": 30,
+  "retryCostWarnPercent": 8,
+  "cacheMissCostWarnPercent": 35,
+  "trackedCta": "https://www.tken.shop/?utm_source=github&utm_medium=owned_repo&utm_campaign=llm_cost_attribution_recipes&utm_content=policy_cta"
+}
