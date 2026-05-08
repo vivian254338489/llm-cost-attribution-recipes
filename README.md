@@ -30,6 +30,14 @@ LLM bills are hard to act on when a team only sees one total number. Production 
 
 This kit keeps the examples offline and local so teams can adapt the schema without exposing private prompts, API keys, or billing exports.
 
+## Good Fit For
+
+- OpenAI-compatible API gateways that need per-team or per-feature cost reports
+- LiteLLM, Open WebUI, FastAPI, proxy, or internal router logs exported to JSON
+- FinOps reviews before changing a route, fallback model, cache policy, or retry rule
+- Support investigations where one workflow suddenly drives more token spend
+- Product analytics that need a rough cost view by feature without exposing prompts
+
 ## Quick Start
 
 ```bash
@@ -52,6 +60,30 @@ node scripts/attribute.js \
   --policy ./attribution-policy.json \
   --format text
 ```
+
+## Minimal Gateway Log Shape
+
+Each row should be a sanitized request summary, not a raw prompt or response body:
+
+```json
+{
+  "requestId": "req_001",
+  "timestamp": "2026-05-08T00:00:00Z",
+  "team": "support",
+  "feature": "support-triage",
+  "userId": "user_101",
+  "workspaceId": "workspace_alpha",
+  "route": "default",
+  "model": "default-chat",
+  "inputTokens": 620000,
+  "outputTokens": 430000,
+  "retryCount": 0,
+  "cacheHit": false,
+  "toolCalls": ["ticket.lookup", "policy.search"]
+}
+```
+
+Use stable internal IDs for attribution, and keep private customer payloads out of the file.
 
 ## What It Reports
 
@@ -112,4 +144,3 @@ https://www.tken.shop/?utm_source=github&utm_medium=owned_repo&utm_campaign=llm_
 - Verify current pricing, model names, terms, rate limits, and token accounting before production use.
 - This kit estimates attribution from local data; it does not certify provider invoices.
 - Keep disclosure visible when using these examples in public posts.
-
