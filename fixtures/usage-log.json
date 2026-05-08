@@ -1,0 +1,106 @@
+{
+  "rows": [
+    {
+      "requestId": "req_001",
+      "timestamp": "2026-05-08T01:10:00Z",
+      "team": "support",
+      "feature": "support-triage",
+      "userId": "user_101",
+      "workspaceId": "workspace_alpha",
+      "route": "default",
+      "model": "default-chat",
+      "inputTokens": 620000,
+      "outputTokens": 430000,
+      "retryCount": 0,
+      "cacheHit": false,
+      "toolCalls": [
+        "ticket.lookup",
+        "policy.search"
+      ]
+    },
+    {
+      "requestId": "req_002",
+      "timestamp": "2026-05-08T01:12:00Z",
+      "team": "support",
+      "feature": "support-triage",
+      "userId": "user_102",
+      "workspaceId": "workspace_alpha",
+      "route": "backup",
+      "model": "backup-premium",
+      "inputTokens": 240000,
+      "outputTokens": 180000,
+      "retryCount": 1,
+      "cacheHit": false,
+      "toolCalls": [
+        "ticket.lookup"
+      ]
+    },
+    {
+      "requestId": "req_003",
+      "timestamp": "2026-05-08T02:05:00Z",
+      "team": "engineering",
+      "feature": "code-review",
+      "userId": "user_201",
+      "workspaceId": "workspace_beta",
+      "route": "default",
+      "model": "default-chat",
+      "inputTokens": 980000,
+      "outputTokens": 520000,
+      "retryCount": 0,
+      "cacheHit": true,
+      "toolCalls": [
+        "repo.diff"
+      ]
+    },
+    {
+      "requestId": "req_004",
+      "timestamp": "2026-05-08T02:16:00Z",
+      "team": "finance",
+      "feature": "invoice-assistant",
+      "userId": "user_301",
+      "workspaceId": "workspace_gamma",
+      "route": "fast",
+      "model": "fast-chat",
+      "inputTokens": 1100000,
+      "outputTokens": 950000,
+      "retryCount": 0,
+      "cacheHit": false,
+      "toolCalls": [
+        "invoice.read"
+      ]
+    },
+    {
+      "requestId": "req_005",
+      "timestamp": "2026-05-08T02:45:00Z",
+      "team": "engineering",
+      "feature": "code-review",
+      "userId": "user_202",
+      "workspaceId": "workspace_beta",
+      "route": "backup",
+      "model": "backup-premium",
+      "inputTokens": 160000,
+      "outputTokens": 110000,
+      "retryCount": 2,
+      "cacheHit": false,
+      "toolCalls": [
+        "repo.diff",
+        "test.lookup"
+      ]
+    },
+    {
+      "requestId": "req_006",
+      "timestamp": "2026-05-08T03:20:00Z",
+      "team": "",
+      "feature": "support-triage",
+      "userId": "user_103",
+      "workspaceId": "workspace_alpha",
+      "route": "default",
+      "model": "embedding-small",
+      "inputTokens": 450000,
+      "outputTokens": 0,
+      "retryCount": 0,
+      "cacheHit": false,
+      "toolCalls": []
+    }
+  ]
+}
