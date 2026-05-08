@@ -1,0 +1,26 @@
+{
+  "name": "llm-cost-attribution-recipes",
+  "version": "0.1.0",
+  "description": "Offline cost attribution recipes for OpenAI-compatible gateway logs by user, feature, route, model, retry, and tool call.",
+  "private": false,
+  "type": "module",
+  "bin": {
+    "llm-cost-attribution": "scripts/attribute.js"
+  },
+  "scripts": {
+    "check": "node scripts/attribute.js --usage fixtures/usage-log.json --prices fixtures/price-table.json --policy fixtures/attribution-policy.json --format json && node scripts/readiness.js",
+    "readiness": "node scripts/readiness.js",
+    "demo": "node scripts/attribute.js --usage fixtures/usage-log.json --prices fixtures/price-table.json --policy fixtures/attribution-policy.json --format text",
+    "demo:json": "node scripts/attribute.js --usage fixtures/usage-log.json --prices fixtures/price-table.json --policy fixtures/attribution-policy.json --format json"
+  },
+  "keywords": [
+    "llm-cost-tracking",
+    "openai-compatible",
+    "ai-gateway",
+    "cost-attribution",
+    "token-usage",
+    "llm-observability",
+    "finops"
+  ],
+  "license": "MIT"
+}
