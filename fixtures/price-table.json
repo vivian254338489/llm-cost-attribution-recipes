@@ -1,0 +1,26 @@
+{
+  "placeholder_notice": "Example prices are placeholders for demo math only. Replace with current provider docs before using reports for planning, alerts, or customer-facing billing.",
+  "currency": "USD",
+  "models": [
+    {
+      "model": "default-chat",
+      "input_per_1m_tokens_usd": 0.7,
+      "output_per_1m_tokens_usd": 1.4
+    },
+    {
+      "model": "fast-chat",
+      "input_per_1m_tokens_usd": 0.2,
+      "output_per_1m_tokens_usd": 0.6
+    },
+    {
+      "model": "backup-premium",
+      "input_per_1m_tokens_usd": 2.4,
+      "output_per_1m_tokens_usd": 6.5
+    },
+    {
+      "model": "embedding-small",
+      "input_per_1m_tokens_usd": 0.08,
+      "output_per_1m_tokens_usd": 0
+    }
+  ]
+}
